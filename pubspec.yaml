@@ -1,6 +1,6 @@
 name: resource_storage
 description: "Base interface for resource storage implementation"
-version: 1.0.0
+version: 1.0.0+1
 homepage: https://github.com/drstranges/resource_storage
 
 environment:

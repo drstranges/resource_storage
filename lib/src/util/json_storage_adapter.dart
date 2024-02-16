@@ -7,7 +7,12 @@ import 'dart:convert';
 import '../resource_storage.dart';
 import 'logger.dart';
 
+/// Helper class for toJson/fromJson conversion using provided [executor]
+/// and [decode].
 class JsonStorageAdapter<V> {
+  /// Creates [JsonStorageAdapter] using provided [executor].
+  /// [decode] should be provided outside as in Dart for Flutter there is no way
+  /// to decode json to concrete class without knowing about the class.
   const JsonStorageAdapter({
     required StorageDecoder<V> decode,
     required StorageExecutor executor,
@@ -20,6 +25,12 @@ class JsonStorageAdapter<V> {
   final StorageExecutor _executor;
   final Logger? _logger;
 
+  /// Converts [value] to a JSON string using [executor].
+  ///
+  /// If [value] contains objects that are not directly encodable to a JSON
+  /// string (a value that is not a number, boolean, string, null, list or a map
+  /// with string keys), the `value.toJson()` function is called to convert it
+  /// to an object that must be directly encodable.
   Future<String> encodeToJson(V value) async {
     return _executor(() {
       try {
@@ -32,6 +43,8 @@ class JsonStorageAdapter<V> {
     });
   }
 
+  /// Parses the string to JSON and then using [_decode] returns the resulting
+  /// object with type [V].
   Future<V> decodeFromJson(dynamic json) async {
     return _executor(() {
       final dynamic jsonMap;

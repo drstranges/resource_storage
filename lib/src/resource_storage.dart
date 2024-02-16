@@ -37,6 +37,7 @@ class CacheEntry<V> {
   int storeTime;
 }
 
+/// Interface for resource storage factory
 abstract interface class ResourceStorageProvider {
   ResourceStorage<K, V> createStorage<K, V>({
     required String storageName,

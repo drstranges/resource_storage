@@ -4,8 +4,10 @@
 
 import 'dart:developer';
 
+/// The severity level for log entry
 enum LoggerLevel { debug, warning, error }
 
+/// Base interface of Logger with default implementation
 interface class Logger {
   const Logger();
 

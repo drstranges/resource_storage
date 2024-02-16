@@ -1,0 +1,10 @@
+name: resource_storage
+description: "Base interface for resource storage implementation"
+version: 1.0.0
+homepage: https://github.com/drstranges/resource_storage
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+dev_dependencies:
+  lints: ^3.0.0

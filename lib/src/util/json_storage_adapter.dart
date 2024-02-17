@@ -16,14 +16,14 @@ class JsonStorageAdapter<V> {
   const JsonStorageAdapter({
     required StorageDecoder<V> decode,
     required StorageExecutor executor,
-    Logger? logger,
+    ResourceLogger? logger,
   })  : _decode = decode,
         _executor = executor,
         _logger = logger;
 
   final StorageDecoder<V> _decode;
   final StorageExecutor _executor;
-  final Logger? _logger;
+  final ResourceLogger? _logger;
 
   /// Converts [value] to a JSON string using [executor].
   ///

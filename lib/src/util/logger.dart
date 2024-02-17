@@ -8,8 +8,8 @@ import 'dart:developer';
 enum LoggerLevel { debug, warning, error }
 
 /// Base interface of Logger with default implementation
-interface class Logger {
-  const Logger();
+interface class ResourceLogger {
+  const ResourceLogger();
 
   void trace(
     LoggerLevel level,

@@ -44,7 +44,7 @@ abstract interface class ResourceStorageProvider {
     StorageDecoder<V>? decode,
     StorageExecutor? executor,
     TimestampProvider? timestampProvider,
-    Logger? logger,
+    ResourceLogger? logger,
   });
 }
 

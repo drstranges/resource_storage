@@ -7,5 +7,5 @@ library resource_storage;
 
 export 'src/resource_storage.dart';
 export 'src/util/json_storage_adapter.dart';
-export 'src/util/logger.dart';
+export 'src/util/resource_logger.dart';
 export 'src/util/timestamp_provider.dart';

@@ -5,7 +5,7 @@
 import 'dart:convert';
 
 import '../resource_storage.dart';
-import 'logger.dart';
+import 'resource_logger.dart';
 
 /// Helper class for toJson/fromJson conversion using provided [executor]
 /// and [decode].

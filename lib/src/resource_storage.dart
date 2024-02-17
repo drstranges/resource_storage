@@ -4,7 +4,7 @@
 
 import 'dart:async';
 
-import 'util/logger.dart';
+import 'util/resource_logger.dart';
 import 'util/timestamp_provider.dart';
 
 /// Base interface for resource cache storage
